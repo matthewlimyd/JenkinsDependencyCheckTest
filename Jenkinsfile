@@ -16,6 +16,7 @@ pipeline {
                     --disableAssembly
                     --disableYarnAudit
                     --prettyPrint
+		    --suppression suppression.xml
                 ''', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
 
                 dependencyCheckPublisher pattern: 'dependency-check-report.xml'
